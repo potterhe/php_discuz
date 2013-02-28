@@ -72,6 +72,9 @@ ZEND_END_MODULE_GLOBALS(discuz)
 #define DISCUZ_G(v) (discuz_globals.v)
 #endif
 
+#define DISCUZ_AUTH_CKEYLEN 4
+#define MICRO_IN_SEC 1000000.00
+
 #endif	/* PHP_DISCUZ_H */
 
 

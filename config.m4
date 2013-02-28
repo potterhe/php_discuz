@@ -13,9 +13,8 @@ dnl [  --with-discuz             Include discuz support])
 
 dnl Otherwise use enable:
 
-dnl PHP_ARG_ENABLE(discuz, whether to enable discuz support,
-dnl Make sure that the comment is aligned:
-dnl [  --enable-discuz           Enable discuz support])
+PHP_ARG_ENABLE(discuz, whether to enable discuz support,
+[  --enable-discuz           Enable discuz support])
 
 if test "$PHP_DISCUZ" != "no"; then
   dnl Write more examples of tests here...
