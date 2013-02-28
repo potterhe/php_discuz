@@ -1,7 +1,10 @@
 php_discuz
 ==========
 
-将discuz的部分功能通过php扩展实现,当前实现了authcode(),扩展的函数为discuz_auth_encode()和discuz_auth_decode()
+将discuz的部分功能通过php扩展实现,当前实现了authcode(),扩展的函数为
+
+    string discuz_auth_encode(string $str, string $key, int $expiry)
+    string discuz_auth_decode(string $str, string $key)
 
 安装
 ------
