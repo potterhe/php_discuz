@@ -36,7 +36,7 @@
 
 PHPAPI static void php_md5(char *, const char *, size_t);
 PHPAPI static void php_discuz_authcode(unsigned char *, const unsigned char *, size_t, const char *);
-PHPAPI static void php_discuz_auth_encode(smart_str *, const char *, size_t, const char *, size_t, int);
+PHPAPI static void php_discuz_auth_encode(smart_str *, const char *, int, const char *, int, long);
 PHPAPI static int php_discuz_auth_decode(char *, const char *, size_t, const char *, size_t);
 PHPAPI static void php_discuz_auth_initkey(char *, char *, char *, const char *, const char *, size_t);
 
@@ -230,7 +230,7 @@ PHP_FUNCTION(discuz_auth_decode)
 }
 /* }}} */
 
-PHPAPI static php_discuz_auth_encode(smart_str *buf, const char *str, int str_len, const char *key, int keylen, long expiry)
+PHPAPI static void php_discuz_auth_encode(smart_str *buf, const char *str, int str_len, const char *key, int keylen, long expiry)
 {
 	char keya[33], keyb[33], keyc[DISCUZ_AUTH_CKEYLEN+1], cryptkey[65]={0};
         char ret[100], retmd5[33];
